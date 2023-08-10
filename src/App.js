@@ -27,6 +27,7 @@ function App() {
      {/* <Buttons></Buttons> */}
      <Display></Display>
      <SimlpeCounter></SimlpeCounter>
+     <hr></hr>
      <ToDoComponent></ToDoComponent>
     </div>
   );
