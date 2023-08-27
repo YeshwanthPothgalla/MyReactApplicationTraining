@@ -1,5 +1,6 @@
 
 import React, { useState } from "react";
+import Button from '@mui/material/Button';
 
 
 function Appcounter(props){
@@ -22,7 +23,7 @@ function Appcounter(props){
     return (
         <div>
             <p>{props.label} : {counter}</p>
-            <button onClick={increment}>Increment</button>
+            <Button onClick={increment}>Increment</Button>
             {/* <button onClick={decrement}>Decreement</button> */}
         </div>
     );

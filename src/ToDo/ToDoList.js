@@ -1,5 +1,6 @@
-
+import Button from '@mui/material/Button';
 import React from "react";
+import IconButton from '@mui/material/IconButton';
 
 function ToDoList(props){
     return(<div>
@@ -10,9 +11,9 @@ function ToDoList(props){
                 <hr></hr>
                 {todo.state === 'COMPLETED'? <p><s>{todo.task}</s></p> : <p>{todo.task}</p>}
                
-                <button onClick={()=>{props.moveUp(index)}} disabled={index===0}>Move Up</button>
-                <button onClick={()=>{props.handleComplete(index)}}>Completed</button>
-                <button onClick={()=>{props.moveDown(index)}} disabled={index === props.toDos.length -1}>Move Down</button>
+                <IconButton aria-lable="up" variant ="outlined" size="small" color="primary" onClick={()=>{props.moveUp(index)}} disabled={index===0}>Move Up</IconButton>
+                <IconButton variant ="outlined" size="small" color="success" onClick={()=>{props.handleComplete(index)}}>Completed</IconButton>
+                <IconButton variant ="outlined" size="small" color="primary" onClick={()=>{props.moveDown(index)}} disabled={index === props.toDos.length -1}>Move Down</IconButton>
 
                 </div>)
             })

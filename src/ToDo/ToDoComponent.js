@@ -3,6 +3,7 @@ import React from "react";
 import  { useState } from "react";
 import ToDoList from "./ToDoList";
 import swapArrayElement from './ArrayUtil'
+import Button from '@mui/material/Button';
 
 
 function ToDoComponent(){
@@ -17,12 +18,18 @@ function ToDoComponent(){
         setTasks(tempTasks);
         setTaskInput('');
     }
+{/* Striking of the task when comlpete method*/}
 
+    // const handleComplete = (index) =>{
+    //     let tempTasks = [...tasks];
+    //     let curTask = tempTasks[index];
+    //     curTask.state = 'COMPLETED';
+    //     setTasks(tempTasks);
+    // }
+{/* Deleting of the task when comlpete method*/}
     const handleComplete = (index) =>{
         let tempTasks = [...tasks];
-        let curTask = tempTasks[index];
-        curTask.state = 'COMPLETED';
-        //tempTasks.splice(index, 1);
+        tempTasks.splice(index, 1);
         setTasks(tempTasks);
     }
     const moveUp = (index) => {        
@@ -43,7 +50,7 @@ function ToDoComponent(){
             <input value={taskInput} onChange={(event)=>{
                 setTaskInput(event.target.value);
             }}></input>
-            <button onClick={addToDoHandler}>Save</button>
+            <Button size="small" variant="contained" onClick={addToDoHandler}>Save</Button>
             <ToDoList toDos={tasks} handleComplete={handleComplete} moveUp={moveUp} moveDown={moveDown} ></ToDoList>
         </div>
     )

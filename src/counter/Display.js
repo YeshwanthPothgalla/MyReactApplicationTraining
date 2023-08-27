@@ -1,6 +1,8 @@
 import { useState } from "react";
 import React from "react";
 import Buttons from './Buttons'
+import '@fontsource/roboto/300.css';
+// import { fontGrid } from "@mui/material/styles/cssUtils";
 
 function Display(){
     let [counter, setCounter] = useState(6);

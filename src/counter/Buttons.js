@@ -1,13 +1,15 @@
 // import Display from "./Display";
 import React from "react";
+import Button from '@mui/material/Button';
+
 function Buttons(props){
 
     
 
     return(
         <div>
-            <button onClick={props.increment} disabled={!(props.counter<4)}>Increement</button>
-            <button onClick={props.decrement} disabled={props.counter===0}>Decreement</button>
+            <Button onClick={props.increment} disabled ={!(props.counter<4)}>Increement</Button>
+            <Button onClick={props.decrement} disabled={props.counter===0}>Decreement</Button>
         </div>
     )
 }
